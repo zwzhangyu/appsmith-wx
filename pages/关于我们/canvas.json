@@ -1,0 +1,117 @@
+{
+  "unpublishedPage": {
+    "name": "关于我们",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 450,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 850,
+          "containerStyle": "none",
+          "snapRows": 129,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 71,
+          "minHeight": 850,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "none",
+              "widgetName": "m_button2",
+              "onClick": "navigateTo('个人中心');",
+              "color": "#fff",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "topRow": 2,
+              "bottomRow": 6,
+              "parentRowSpace": 10,
+              "showLoading": false,
+              "type": "TARO_BUTTON_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 45,
+              "dynamicBindingPathList": [],
+              "text": " < 个人中心",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 63,
+              "widgetId": "2qzc41oi6y",
+              "isVisible": true,
+              "version": 1,
+              "textColor": "#666",
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "rounded": true,
+              "fontSize": "14px"
+            },
+            {
+              "widgetName": "text1",
+              "isCanvas": false,
+              "displayName": "文本",
+              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+              "searchTags": [
+                "text",
+                "label",
+                "文字",
+                "标题"
+              ],
+              "topRow": 24,
+              "bottomRow": 28,
+              "parentRowSpace": 10,
+              "type": "TARO_TEXT_WIDGET",
+              "hideCard": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 26,
+              "dynamicBindingPathList": [],
+              "text": "关于我们",
+              "isMobile": true,
+              "key": "csrmtphrxp",
+              "isDeprecated": false,
+              "rightColumn": 42,
+              "textAlign": "LEFT",
+              "widgetId": "extfgyab6x",
+              "isVisible": true,
+              "textColor": "#333",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "1rem"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "关于我们",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false,
+    "icon": ""
+  },
+  "deleted": false,
+  "gitSyncId": "63047f8d8eecf64c3a699893_63047f8d8eecf64c3a6998cb"
+}

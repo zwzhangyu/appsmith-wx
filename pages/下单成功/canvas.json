@@ -1,0 +1,112 @@
+{
+  "unpublishedPage": {
+    "name": "下单成功",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 450,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 840,
+          "containerStyle": "none",
+          "snapRows": 129,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 30,
+          "minHeight": 850,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "widgetName": "m_text1",
+              "rightColumn": 49,
+              "textAlign": "CENTER",
+              "widgetId": "oqs6xgpv2n",
+              "topRow": 31,
+              "bottomRow": 36,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "TARO_TEXT_WIDGET",
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 16,
+              "dynamicBindingPathList": [],
+              "fontSize": "HEADING1",
+              "text": "订单提交成功！"
+            },
+            {
+              "widgetName": "m_image1",
+              "rightColumn": 64,
+              "src": "https://img.icons8.com/stickers/344/ok.png",
+              "widgetId": "gwr9vagt7b",
+              "topRow": 4,
+              "bottomRow": 31,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "TARO_IMAGE_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "mode": "aspectFit",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": []
+            },
+            {
+              "widgetName": "m_button1",
+              "rightColumn": 52,
+              "onClick": "{{navigateTo('订单详情',{id: global.URL.queryParams.orderId})}}",
+              "widgetId": "g2fxm87o1r",
+              "topRow": 40,
+              "bottomRow": 46,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "showLoading": true,
+              "type": "TARO_BUTTON_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 13,
+              "dynamicBindingPathList": [],
+              "rounded": true,
+              "fontSize": "16px",
+              "text": "查看订单"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [],
+        "validOnPageLoadActions": true,
+        "id": "下单成功",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false,
+    "icon": ""
+  },
+  "deleted": false,
+  "gitSyncId": "63047f8d8eecf64c3a699893_63047f8d8eecf64c3a6998c9"
+}

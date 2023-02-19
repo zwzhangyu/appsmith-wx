@@ -1,0 +1,184 @@
+{
+  "unpublishedPage": {
+    "name": "注册",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 450,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 850,
+          "containerStyle": "none",
+          "snapRows": 129,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 71,
+          "minHeight": 850,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "labelTextSize": "0.875rem",
+              "buttonText": "注 册",
+              "boxShadow": "none",
+              "widgetName": "m_form1",
+              "rightColumn": 64,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onSubmit"
+                }
+              ],
+              "widgetId": "c94b8oumnl",
+              "inset": true,
+              "onSubmit": "{{Register.run(function(r){\n\tif (r.errno) {\n\t\tshowAlert(r.errmsg, 'error');\n\t\treturn;\n\t}\n\tstoreValue('loginInfo', r.data);\n\tshowAlert('注册成功', 'success');\n\tnavigateTo('首页');\n}, function(){})\n}}",
+              "topRow": 19,
+              "bottomRow": 46,
+              "fieldsObj": {
+                "password": {
+                  "widgetId": "",
+                  "name": "password",
+                  "index": 1,
+                  "inputType": "password",
+                  "label": "密码",
+                  "id": "password",
+                  "fieldType": "input",
+                  "required": true
+                },
+                "user": {
+                  "widgetId": "",
+                  "name": "user",
+                  "index": 0,
+                  "inputType": "text",
+                  "label": "用户名",
+                  "id": "user",
+                  "fieldType": "input",
+                  "required": true
+                }
+              },
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "TARO_FORM_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onSubmit"
+                }
+              ],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "borderRadius": "0px"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_text1",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "fontSize"
+                }
+              ],
+              "topRow": 6,
+              "bottomRow": 11,
+              "parentRowSpace": 10,
+              "type": "TARO_TEXT_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 14,
+              "dynamicBindingPathList": [],
+              "text": "欢迎新朋友",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 49,
+              "textAlign": "CENTER",
+              "widgetId": "vsaunayqrf",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "fontSize": "1.5rem"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_button1",
+              "onClick": "{{navigateTo('登录', {})}}",
+              "color": "#fff",
+              "topRow": 14,
+              "bottomRow": 19,
+              "parentRowSpace": 10,
+              "type": "TARO_BUTTON_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 43,
+              "dynamicBindingPathList": [],
+              "text": "立即登录 >",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 61,
+              "widgetId": "biy5oy8poe",
+              "isVisible": true,
+              "version": 1,
+              "textColor": "#DD4B34",
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "rounded": true,
+              "fontSize": "14px"
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_text2",
+              "rightColumn": 43,
+              "backgroundColor": "",
+              "textAlign": "RIGHT",
+              "widgetId": "t6b6tkr138",
+              "topRow": 15,
+              "bottomRow": 19,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "TARO_TEXT_WIDGET",
+              "textColor": "#999",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 28,
+              "dynamicBindingPathList": [],
+              "borderRadius": "0px",
+              "fontSize": "0.875rem",
+              "text": "已有账号？"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "注册",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "63047f8d8eecf64c3a699893_63047f8d8eecf64c3a6998b1"
+}

@@ -1,0 +1,182 @@
+{
+  "unpublishedPage": {
+    "name": "地址表单",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 450,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 840,
+          "containerStyle": "none",
+          "snapRows": 129,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 71,
+          "minHeight": 850,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "none",
+              "widgetName": "m_form1",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onSubmit"
+                }
+              ],
+              "onSubmit": "{{AddressSave.run(function(r){\n\tif (r.errno) {\n\t\tshowAlert(r.errmsg, 'error');\n\t\treturn;\n\t}\n\tif (global.URL.queryParams.from === 'order') {\n\t\tnavigateTo('选择收货地址');\n\t} else {\n\t\tnavigateTo('收货地址');\n\t}\n}, function(){})}}",
+              "topRow": 6,
+              "bottomRow": 55,
+              "fieldsObj": {
+                "fieldssrkip3t6h": {
+                  "widgetId": "r4jvg6jm3r",
+                  "name": "areaCode",
+                  "index": 2,
+                  "inputType": "text",
+                  "id": "fieldssrkip3t6h",
+                  "label": "所在地区",
+                  "fieldType": "address",
+                  "required": true
+                },
+                "fieldgg7l6jrsbq": {
+                  "widgetId": "a7wvhfwkzq",
+                  "name": "isDefault",
+                  "index": 4,
+                  "inputType": "text",
+                  "id": "fieldgg7l6jrsbq",
+                  "label": "设为默认地址",
+                  "fieldType": "switch",
+                  "required": true
+                },
+                "fieldbzodwiopru": {
+                  "widgetId": "rqzpq56p7s",
+                  "name": "tel",
+                  "index": 1,
+                  "inputType": "number",
+                  "id": "fieldbzodwiopru",
+                  "label": "手机号码",
+                  "fieldType": "input",
+                  "required": true
+                },
+                "user": {
+                  "widgetId": "",
+                  "name": "name",
+                  "index": 0,
+                  "inputType": "text",
+                  "label": "收货人",
+                  "id": "user",
+                  "fieldType": "input",
+                  "required": true
+                },
+                "fieldxdw8lcvhvp": {
+                  "widgetId": "v9xxtdlujw",
+                  "name": "addressDetail",
+                  "index": 3,
+                  "inputType": "text",
+                  "id": "fieldxdw8lcvhvp",
+                  "label": "详细地址",
+                  "fieldType": "input",
+                  "required": true
+                }
+              },
+              "parentRowSpace": 10,
+              "type": "TARO_FORM_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onSubmit"
+                }
+              ],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "defaultValues"
+                }
+              ],
+              "defaultValues": "{{AddressDetail.data.data}}",
+              "labelTextSize": "0.875rem",
+              "buttonText": "保 存",
+              "rightColumn": 64,
+              "widgetId": "kn8i7mrwrg",
+              "inset": true,
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_text1",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "fontSize"
+                }
+              ],
+              "topRow": 2,
+              "bottomRow": 6,
+              "parentRowSpace": 10,
+              "type": "TARO_TEXT_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 3,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "text": "{{global.URL.queryParams.id ? '编辑' : '添加'}}收货地址",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 31,
+              "textAlign": "LEFT",
+              "widgetId": "dgbvyzstkd",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "fontSize": "1.125rem"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "地址表单_AddressDetail",
+              "name": "AddressDetail",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "global.store.loginInfo.token",
+                "global.URL.queryParams.id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "地址表单",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "63047f8d8eecf64c3a699893_63047f8d8eecf64c3a6998bb"
+}

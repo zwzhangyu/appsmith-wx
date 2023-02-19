@@ -1,0 +1,106 @@
+{
+  "pages": [
+    {
+      "id": "首页",
+      "isDefault": true
+    },
+    {
+      "id": "全部商品",
+      "isDefault": false
+    },
+    {
+      "id": "购物车",
+      "isDefault": false
+    },
+    {
+      "id": "个人中心",
+      "isDefault": false
+    },
+    {
+      "id": "下单",
+      "isDefault": false
+    },
+    {
+      "id": "我的订单",
+      "isDefault": false
+    },
+    {
+      "id": "优惠券",
+      "isDefault": false
+    },
+    {
+      "id": "地址表单",
+      "isDefault": false
+    },
+    {
+      "id": "下单成功",
+      "isDefault": false
+    },
+    {
+      "id": "选择收货地址",
+      "isDefault": false
+    },
+    {
+      "id": "商品详情",
+      "isDefault": false
+    },
+    {
+      "id": "注册",
+      "isDefault": false
+    },
+    {
+      "id": "搜索",
+      "isDefault": false
+    },
+    {
+      "id": "二级分类",
+      "isDefault": false
+    },
+    {
+      "id": "关于我们",
+      "isDefault": false
+    },
+    {
+      "id": "订单详情",
+      "isDefault": false
+    },
+    {
+      "id": "我的收藏",
+      "isDefault": false
+    },
+    {
+      "id": "登录",
+      "isDefault": false
+    },
+    {
+      "id": "收货地址",
+      "isDefault": false
+    },
+    {
+      "id": "表单测试",
+      "isDefault": false
+    },
+    {
+      "id": "草稿",
+      "isDefault": false
+    },
+    {
+      "id": "测试",
+      "isDefault": false
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "color": "#C7F3F0",
+  "icon": "product",
+  "unpublishedAppLayout": {
+    "type": "MOBILE_FLUID"
+  },
+  "publishedAppLayout": {
+    "type": "MOBILE_FLUID"
+  },
+  "applicationVersion": 1,
+  "isManualUpdate": false,
+  "deleted": false
+}

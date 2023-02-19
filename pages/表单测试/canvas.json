@@ -1,0 +1,301 @@
+{
+  "unpublishedPage": {
+    "name": "表单测试",
+    "slug": "",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 870,
+          "containerStyle": "none",
+          "snapRows": 82,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 71,
+          "minHeight": 830,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "widgetName": "popup1",
+              "isCanvas": false,
+              "displayName": "底部弹窗",
+              "iconSVG": "/static/media/icon.710918ebd81aede186a43b16046fbead.svg",
+              "searchTags": [
+                "popup",
+                "dialog",
+                "modal"
+              ],
+              "topRow": 0,
+              "bottomRow": 40,
+              "parentRowSpace": 10,
+              "type": "TARO_POPUP_WIDGET",
+              "hideCard": false,
+              "parentColumnSpace": 1,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "children": [
+                {
+                  "widgetName": "Canvas1",
+                  "displayName": "Canvas",
+                  "topRow": 0,
+                  "bottomRow": 400,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": false,
+                  "hideCard": true,
+                  "shouldScrollContents": false,
+                  "minHeight": 400,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [],
+                  "isDisabled": false,
+                  "key": "tad44s61n2",
+                  "isDeprecated": false,
+                  "rightColumn": 0,
+                  "detachFromLayout": true,
+                  "widgetId": "p1no95niz7",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "bnihnpvxhb",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
+                }
+              ],
+              "isMobile": true,
+              "key": "a65xmmbeoc",
+              "height": "400",
+              "isDeprecated": false,
+              "rightColumn": 0,
+              "detachFromLayout": true,
+              "widgetId": "bnihnpvxhb",
+              "canOutsideClickClose": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "rounded": true
+            },
+            {
+              "widgetName": "form2",
+              "isCanvas": false,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onSubmit"
+                }
+              ],
+              "displayName": "表单",
+              "iconSVG": "/static/media/icon.ea3e08d130e59c56867ae40114c10eed.svg",
+              "onSubmit": "{{add_user.run(function(r){\n\tshowAlert(r, 'success');\n\tlist_user.run();\n}, function(){});\n}}",
+              "searchTags": [
+                "form"
+              ],
+              "topRow": 4,
+              "bottomRow": 31,
+              "fieldsObj": {
+                "user": {
+                  "label": "姓名",
+                  "id": "user",
+                  "name": "t_username",
+                  "widgetId": "",
+                  "fieldType": "input",
+                  "required": true,
+                  "inputType": "text",
+                  "index": 0
+                },
+                "password": {
+                  "label": "电话",
+                  "id": "password",
+                  "name": "t_phone",
+                  "widgetId": "",
+                  "fieldType": "input",
+                  "required": true,
+                  "inputType": "text",
+                  "index": 1
+                }
+              },
+              "parentRowSpace": 10,
+              "type": "TARO_FORM_WIDGET",
+              "hideCard": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onSubmit"
+                }
+              ],
+              "leftColumn": 2,
+              "dynamicBindingPathList": [],
+              "defaultValues": "",
+              "isMobile": true,
+              "key": "0dy9uiyc6t",
+              "isDeprecated": false,
+              "rightColumn": 64,
+              "widgetId": "36i8jvqxjb",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false
+            },
+            {
+              "widgetName": "text1",
+              "isCanvas": false,
+              "displayName": "文本",
+              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+              "searchTags": [
+                "text",
+                "label",
+                "文字",
+                "标题"
+              ],
+              "topRow": 0,
+              "bottomRow": 4,
+              "parentRowSpace": 10,
+              "type": "TARO_TEXT_WIDGET",
+              "hideCard": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 22,
+              "dynamicBindingPathList": [],
+              "text": "信息填报",
+              "isMobile": true,
+              "key": "oxgiz8migu",
+              "isDeprecated": false,
+              "rightColumn": 38,
+              "textAlign": "CENTER",
+              "widgetId": "f084onj3ny",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#333",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "1rem"
+            },
+            {
+              "widgetName": "list1",
+              "buttonColor": "#03b365",
+              "isCanvas": false,
+              "displayName": "列表",
+              "iconSVG": "/static/media/icon.9925ee17dee37bf1ba7374412563a8a7.svg",
+              "searchTags": [
+                "list"
+              ],
+              "topRow": 40,
+              "bottomRow": 79,
+              "enableEmptyButton": false,
+              "parentRowSpace": 10,
+              "type": "TARO_LIST_WIDGET",
+              "showLoading": false,
+              "hideCard": false,
+              "priceKey": "mobile",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "titleColor": "#646566",
+              "leftColumn": 1,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "enableSwipe": true,
+              "isMobile": true,
+              "contentType": "I_N_D_P",
+              "key": "z3sm6iccn2",
+              "height": "80px",
+              "isDeprecated": false,
+              "rightColumn": 64,
+              "inset": false,
+              "priceColor": "#dc2626",
+              "widgetId": "p9s3zezedv",
+              "descriptionKey": "addTime",
+              "descriptionColor": "#999",
+              "isVisible": true,
+              "list": "{{list_user.data.data.list}}",
+              "titleKey": "username",
+              "parentId": "0",
+              "urlKey": "",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "controlType": "BUTTON",
+              "width": "100px",
+              "enableCheckbox": false
+            },
+            {
+              "widgetName": "text2",
+              "isCanvas": false,
+              "displayName": "文本",
+              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+              "searchTags": [
+                "text",
+                "label",
+                "文字",
+                "标题"
+              ],
+              "topRow": 33,
+              "bottomRow": 37,
+              "parentRowSpace": 10,
+              "type": "TARO_TEXT_WIDGET",
+              "hideCard": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 23,
+              "dynamicBindingPathList": [],
+              "text": "用户列表",
+              "isMobile": true,
+              "key": "oxgiz8migu",
+              "isDeprecated": false,
+              "rightColumn": 39,
+              "textAlign": "CENTER",
+              "widgetId": "qqek1oeicu",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#333",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "1rem"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "表单测试_list_user",
+              "name": "list_user",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "表单测试",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false,
+    "icon": ""
+  },
+  "deleted": false,
+  "gitSyncId": "63f08b6dde5d5825c7acb93c_63f0ad95de5d5825c7acba0b"
+}

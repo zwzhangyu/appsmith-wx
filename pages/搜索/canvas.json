@@ -1,0 +1,176 @@
+{
+  "unpublishedPage": {
+    "name": "搜索",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 450,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 840,
+          "containerStyle": "none",
+          "snapRows": 129,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 71,
+          "minHeight": 850,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "none",
+              "widgetName": "m_search1",
+              "topRow": 0,
+              "bottomRow": 7,
+              "onSearch": "{{Search.run(() => {}, () => showAlert('搜索失败','error'))}}",
+              "parentRowSpace": 10,
+              "type": "TARO_SEARCH_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onSearch"
+                }
+              ],
+              "readonly": false,
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "placeholder": "请输入商品关键词",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 64,
+              "widgetId": "mpk8nyui7z",
+              "inputAlign": "left",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "showButton": true,
+              "rounded": true
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_tabs1",
+              "rightColumn": 64,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "widgetId": "ivw6egjinh",
+              "topRow": 7,
+              "bottomRow": 14,
+              "onTabSelected": "{{Search.run()}}",
+              "parentRowSpace": 10,
+              "isVisible": "{{Search.data.data ? !!Search.data.data.filterCategoryList.length : false}}",
+              "list": "{{[{name: '全部', id: 0}].concat(Search.data.data.filterCategoryList || [])}}",
+              "type": "TARO_TABS_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onTabSelected"
+                }
+              ],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                },
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "borderRadius": "0px",
+              "nameKey": "name",
+              "defaultNum": "0"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_grid1",
+              "buttonColor": "#03b365",
+              "dynamicPropertyPathList": [],
+              "topRow": 14,
+              "bottomRow": 81,
+              "enableEmptyButton": false,
+              "parentRowSpace": 10,
+              "bordered": true,
+              "type": "TARO_GRID_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onItemClicked"
+                },
+                {
+                  "key": "emptyButtonAction"
+                }
+              ],
+              "titleColor": "#646566",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "gridType": "I_N",
+              "cols": "3",
+              "height": "100px",
+              "labelTextSize": "0.875rem",
+              "priceUnit": "￥",
+              "rightColumn": 64,
+              "widgetId": "lzsof4i6pt",
+              "descriptionColor": "#DD4B34",
+              "isVisible": true,
+              "list": "{{Search.data.data.list}}",
+              "titleKey": "name",
+              "parentId": "0",
+              "urlKey": "picUrl",
+              "isLoading": true,
+              "gutter": "0",
+              "onItemClicked": "{{navigateTo('商品详情',{id: m_grid1.currentItem.id})}}",
+              "borderRadius": "0px",
+              "emptyButtonText": "",
+              "emptyButtonAction": ""
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "搜索_Search",
+              "name": "Search",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "(m_tabs1.selectedTab ? m_tabs1.selectedTab.id : 0) || 0",
+                "m_search1.text"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "搜索",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "63047f8d8eecf64c3a699893_63047f8d8eecf64c3a6998ad"
+}

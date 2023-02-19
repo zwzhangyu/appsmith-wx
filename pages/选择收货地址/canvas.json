@@ -1,0 +1,165 @@
+{
+  "unpublishedPage": {
+    "name": "选择收货地址",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 450,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 870,
+          "containerStyle": "none",
+          "snapRows": 129,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 71,
+          "minHeight": 880,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "none",
+              "widgetName": "m_text1",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "fontSize"
+                }
+              ],
+              "topRow": 1,
+              "bottomRow": 6,
+              "parentRowSpace": 10,
+              "type": "TARO_TEXT_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 3,
+              "dynamicBindingPathList": [],
+              "text": "请选择收货地址：",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 29,
+              "textAlign": "LEFT",
+              "widgetId": "rbwl51w9iy",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "fontSize": "1.125rem"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_list1",
+              "buttonColor": "#03b365",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "emptyText": "暂无收货地址",
+              "topRow": 6,
+              "bottomRow": 76,
+              "parentRowSpace": 10,
+              "type": "TARO_LIST_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "titleColor": "#646566",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "contentType": "I_N_D",
+              "height": "50px",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 64,
+              "inset": true,
+              "priceColor": "#DD4B34",
+              "widgetId": "onv0etse5h",
+              "descriptionKey": "description",
+              "descriptionColor": "#999",
+              "isVisible": true,
+              "list": "{{Address.data.data.list.map(function(c){\n\tc.title = c.name + ' ' + c.tel + (c.isDefault ? \"【默认】\": '');\n\tc.picUrl = 'https://img.icons8.com/stickers/2x/address.png';\n\tc.description = c.province + ' ' + c.city + ' ' + c.county + '\\\\n' + c.addressDetail;\n\treturn c;\n})}}",
+              "titleKey": "title",
+              "parentId": "0",
+              "urlKey": "picUrl",
+              "isLoading": false,
+              "onItemClicked": "{{(function(){\nstoreValue('currentAddressId',m_list1.currentItem.id);\n\tnavigateTo('下单');\n})()}}",
+              "controlType": "BUTTON",
+              "borderRadius": "0px",
+              "width": "80px"
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_button1",
+              "rightColumn": 62,
+              "onClick": "{{navigateTo('地址表单',{from: 'order'})}}",
+              "widgetId": "bvnf8ny6bh",
+              "topRow": 1,
+              "bottomRow": 6,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "showLoading": false,
+              "type": "TARO_BUTTON_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 38,
+              "dynamicBindingPathList": [],
+              "borderRadius": "0px",
+              "rounded": true,
+              "fontSize": "14px",
+              "text": "+ 添加新地址"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "选择收货地址_Address",
+              "name": "Address",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "global.store.loginInfo.token"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "选择收货地址",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false,
+    "icon": ""
+  },
+  "deleted": false,
+  "gitSyncId": "63047f8d8eecf64c3a699893_63047f8d8eecf64c3a6998c7"
+}

@@ -1,0 +1,181 @@
+{
+  "unpublishedPage": {
+    "name": "我的订单",
+    "slug": "",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 450,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 840,
+          "containerStyle": "none",
+          "snapRows": 129,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 71,
+          "minHeight": 850,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "none",
+              "widgetName": "m_button2",
+              "onClick": "navigateTo('个人中心');",
+              "color": "#fff",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "topRow": 0,
+              "bottomRow": 4,
+              "parentRowSpace": 10,
+              "showLoading": false,
+              "type": "TARO_BUTTON_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 46,
+              "dynamicBindingPathList": [],
+              "text": " < 个人中心",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 64,
+              "widgetId": "t5410xgw0i",
+              "isVisible": true,
+              "version": 1,
+              "textColor": "#666",
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "rounded": true,
+              "fontSize": "14px"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_tabs1",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onTabSelected"
+                }
+              ],
+              "topRow": 4,
+              "bottomRow": 11,
+              "parentRowSpace": 10,
+              "showLoading": false,
+              "type": "TARO_TABS_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onTabSelected"
+                }
+              ],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "defaultNum"
+                }
+              ],
+              "labelTextSize": "0.875rem",
+              "rightColumn": 64,
+              "widgetId": "km1friqft1",
+              "onTabSelected": "{{(function(){\nstoreValue('orderCurrentType', m_tabs1.selectedTab.type);\nOrder.run();\n})()}}",
+              "isVisible": true,
+              "list": "[\n  {\n    \"name\": \"全部\",\n    \"type\": 0\n  },\n  {\n    \"name\": \"待付款\",\n    \"type\": 1\n  },\n  {\n    \"name\": \"待发货\",\n    \"type\": 2\n  },\n\t{\n\t\t \"name\": \"待收货\",\n    \"type\": 3\n\t},\n\t{\n\t\t \"name\": \"待评价\",\n    \"type\": 4\n\t}\n]",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "nameKey": "name",
+              "defaultNum": "{{global.store.orderCurrentType || 0}}"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_list1",
+              "buttonColor": "#03b365",
+              "emptyText": "没有相关订单",
+              "topRow": 11,
+              "bottomRow": 76,
+              "parentRowSpace": 10,
+              "type": "TARO_LIST_WIDGET",
+              "showLoading": true,
+              "priceKey": "actualPrice",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "titleColor": "#000",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "contentType": "I_N_D_P",
+              "height": "80px",
+              "labelTextSize": "0.875rem",
+              "buttonText": "",
+              "rightColumn": 64,
+              "inset": false,
+              "priceColor": "#DD4B34",
+              "widgetId": "75izedz22w",
+              "descriptionKey": "description",
+              "descriptionColor": "#999",
+              "emptyPic": "https://img.icons8.com/stickers/344/purchase-order.png",
+              "isVisible": true,
+              "list": "{{Order.data.data.list.map(function(o){\n\tvar goodsList = o.goodsList;\n\tif (goodsList.length) {\n\t\to.picUrl = goodsList[0].picUrl;\n\t}\n\to.title = o.orderSn + ' - ' + o.orderStatusText;\n\to.description = goodsList.map(function(g){\n\t\treturn g.goodsName + '【' + g.specifications + '】 ￥' + g.price + ' x ' + g.number;\n\t}).join('\\\\n');\n\treturn o;\n})}}",
+              "titleKey": "title",
+              "parentId": "0",
+              "urlKey": "picUrl",
+              "isLoading": false,
+              "onItemClicked": "{{navigateTo('订单详情',{id: m_list1.currentItem.id})}}",
+              "controlType": "BUTTON",
+              "borderRadius": "0px",
+              "width": "100px"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "我的订单_Order",
+              "name": "Order",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "global.store.orderCurrentType || 0",
+                "global.store.loginInfo.token"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "我的订单",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false,
+    "icon": ""
+  },
+  "deleted": false,
+  "gitSyncId": "63047f8d8eecf64c3a699893_63047f8d8eecf64c3a6998b3"
+}

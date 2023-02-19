@@ -1,0 +1,414 @@
+{
+  "unpublishedPage": {
+    "name": "下单",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 450,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 840,
+          "containerStyle": "none",
+          "snapRows": 129,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 71,
+          "minHeight": 880,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_text3Copy",
+              "rightColumn": 15,
+              "textAlign": "LEFT",
+              "widgetId": "3008rgl9ff",
+              "topRow": 51,
+              "bottomRow": 55,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "TARO_TEXT_WIDGET",
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 3,
+              "dynamicBindingPathList": [],
+              "borderRadius": "0px",
+              "fontSize": "1rem",
+              "text": "支付明细"
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_bottom_bar1",
+              "rightColumn": 71,
+              "detachFromLayout": true,
+              "widgetId": "oqy88vz8m5",
+              "topRow": 57,
+              "bottomRow": 65,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "canOutsideClickClose": true,
+              "type": "TARO_BOTTOM_BAR_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 7,
+              "dynamicBindingPathList": [],
+              "borderRadius": "0px",
+              "children": [
+                {
+                  "boxShadow": "none",
+                  "widgetName": "Canvas1",
+                  "topRow": 0,
+                  "bottomRow": 80,
+                  "parentRowSpace": 1,
+                  "canExtend": false,
+                  "type": "CANVAS_WIDGET",
+                  "shouldScrollContents": false,
+                  "minHeight": 80,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "m_button1",
+                      "onClick": "{{SubmitOrder.run(function(r){\n\tif (r.errno) {\n\t\tshowAlert(r.errmsg, 'error');\n\t\treturn;\n\t}\n\tnavigateTo('下单成功',{orderId: r.data.orderId})\n}, function(){})}}",
+                      "color": "",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "topRow": 0,
+                      "bottomRow": 5,
+                      "parentRowSpace": 10,
+                      "type": "TARO_BUTTON_WIDGET",
+                      "parentColumnSpace": 6.71875,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 40,
+                      "dynamicBindingPathList": [],
+                      "text": "假装付款",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 64,
+                      "widgetId": "mg7vf6njv1",
+                      "isVisible": true,
+                      "version": 1,
+                      "textColor": "",
+                      "parentId": "b05vba7afm",
+                      "isBold": true,
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "rounded": true,
+                      "fontSize": "18px"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "m_text1",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
+                      "topRow": 0,
+                      "bottomRow": 5,
+                      "parentRowSpace": 10,
+                      "type": "TARO_TEXT_WIDGET",
+                      "parentColumnSpace": 6.71875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 10,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "text": "￥{{CartCheck.data.data.orderTotalPrice}}",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 26,
+                      "textAlign": "LEFT",
+                      "widgetId": "1r0wsohojs",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#DD4B34",
+                      "version": 1,
+                      "parentId": "b05vba7afm",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
+                    },
+                    {
+                      "labelTextSize": "0.875rem",
+                      "boxShadow": "none",
+                      "widgetName": "m_text2",
+                      "rightColumn": 10,
+                      "textAlign": "RIGHT",
+                      "widgetId": "6ciri6qkx3",
+                      "topRow": 0,
+                      "bottomRow": 5,
+                      "parentRowSpace": 10,
+                      "isVisible": true,
+                      "type": "TARO_TEXT_WIDGET",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "b05vba7afm",
+                      "isLoading": false,
+                      "parentColumnSpace": 6.71875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "borderRadius": "0px",
+                      "fontSize": "1rem",
+                      "text": "实付:"
+                    }
+                  ],
+                  "isDisabled": false,
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 438,
+                  "detachFromLayout": true,
+                  "widgetId": "b05vba7afm",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "oqy88vz8m5",
+                  "isLoading": false,
+                  "borderRadius": "0px"
+                }
+              ],
+              "height": "80"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_list1",
+              "buttonColor": "#03b365",
+              "topRow": 17,
+              "bottomRow": 51,
+              "parentRowSpace": 10,
+              "type": "TARO_LIST_WIDGET",
+              "showLoading": true,
+              "priceKey": "price",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "titleColor": "#646566",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "contentType": "I_N_D_P_B",
+              "height": "80px",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 64,
+              "inset": true,
+              "priceColor": "#DD4B34",
+              "widgetId": "wekqu57xcc",
+              "descriptionKey": "specifications",
+              "descriptionColor": "#999",
+              "isVisible": true,
+              "list": "{{CartCheck.data.data.checkedGoodsList.map(function(g){\n\tg.num = 'x ' + g.number;\n\treturn g;\n})}}",
+              "titleKey": "goodsName",
+              "parentId": "0",
+              "urlKey": "picUrl",
+              "isLoading": false,
+              "controlType": "TEXT",
+              "borderRadius": "0px",
+              "controlTextKey": "num",
+              "width": "100px"
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_cell1",
+              "rightColumn": 64,
+              "dynamicPropertyPathList": [],
+              "inset": true,
+              "widgetId": "rt68ti01z2",
+              "topRow": 1,
+              "bottomRow": 13,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "bordered": false,
+              "type": "TARO_CELL_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "cellsObj.cell1.onClick"
+                }
+              ],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "cellsObj.cell1.brief"
+                },
+                {
+                  "key": "cellsObj.cell1.label"
+                }
+              ],
+              "borderRadius": "0px",
+              "cellsObj": {
+                "cell1": {
+                  "brief": "{{CartCheck.data.data.checkedAddress.city || ''}} {{CartCheck.data.data.checkedAddress.county||''}} {{CartCheck.data.data.checkedAddress.addressDetail||''}}",
+                  "onClick": "{{navigateTo('选择收货地址',{})}}",
+                  "picType": "icon",
+                  "widgetId": "",
+                  "icon": "location",
+                  "iconColor": "#03b365",
+                  "showArrow": true,
+                  "index": 0,
+                  "label": "{{CartCheck.data.data.checkedAddress.name || '请选择收货地址'}} {{CartCheck.data.data.checkedAddress.tel||''}}",
+                  "id": "cell1",
+                  "isVisible": true
+                }
+              }
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_kv1",
+              "kColor": "#666",
+              "kKey": "key",
+              "vBold": false,
+              "kSize": "HEADING3",
+              "kAlign": "LEFT",
+              "topRow": 55,
+              "bottomRow": 74,
+              "parentRowSpace": 10,
+              "type": "TARO_KV_WIDGET",
+              "showLoading": true,
+              "vColor": "#DD4B34",
+              "vAlign": "LEFT",
+              "kBold": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "labelTextSize": "0.875rem",
+              "rightColumn": 64,
+              "inset": true,
+              "widgetId": "kvyenawvpb",
+              "isVisible": true,
+              "list": "[\n  {\n    \"key\": \"商品总计\",\n    \"value\": \"￥{{CartCheck.data.data.goodsTotalPrice}}\"\n  },\n  {\n    \"key\": \"运费\",\n    \"value\": \"￥{{CartCheck.data.data.freightPrice}}\"\n  },\n\t{\n    \"key\": \"优惠券\",\n    \"value\": \"-￥{{CartCheck.data.data.couponPrice}}\"\n  }\n]",
+              "version": 1,
+              "parentId": "0",
+              "layout": "hb",
+              "isLoading": false,
+              "vSize": "HEADING2",
+              "borderRadius": "0px",
+              "vKey": "value"
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_text3",
+              "rightColumn": 15,
+              "textAlign": "LEFT",
+              "widgetId": "mww5tv4tbp",
+              "topRow": 13,
+              "bottomRow": 17,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "TARO_TEXT_WIDGET",
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 3,
+              "dynamicBindingPathList": [],
+              "borderRadius": "0px",
+              "fontSize": "1rem",
+              "text": "商品清单"
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_loading1",
+              "rightColumn": 19,
+              "detachFromLayout": true,
+              "loadingText": "正在提交...",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "showLoading"
+                }
+              ],
+              "widgetId": "viunfqzqy6",
+              "topRow": 19,
+              "bottomRow": 27,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "showLoading": "{{SubmitOrder.isLoading}}",
+              "type": "TARO_LOADING_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 3,
+              "dynamicBindingPathList": [
+                {
+                  "key": "showLoading"
+                }
+              ],
+              "borderRadius": "0px"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "下单_CartCheck",
+              "name": "CartCheck",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "global.store.loginInfo.token",
+                "global.URL.queryParams.cartId || 0",
+                "global.store.currentAddressId || 0"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "下单",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "63047f8d8eecf64c3a699893_63047f8d8eecf64c3a6998ab"
+}

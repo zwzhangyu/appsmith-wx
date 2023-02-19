@@ -1,0 +1,390 @@
+{
+  "unpublishedPage": {
+    "name": "个人中心",
+    "slug": "",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 450,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 840,
+          "containerStyle": "none",
+          "snapRows": 129,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 71,
+          "minHeight": 850,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_cell1",
+              "rightColumn": 64,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "cellsObj.cellat6sh8sw74.onClick"
+                },
+                {
+                  "key": "cellsObj.cell1.onClick"
+                }
+              ],
+              "inset": true,
+              "widgetId": "yg3bqvspwq",
+              "topRow": 28,
+              "bottomRow": 47,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "bordered": false,
+              "type": "TARO_CELL_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "cellsObj.cellat6sh8sw74.onClick"
+                },
+                {
+                  "key": "cellsObj.cell1.onClick"
+                },
+                {
+                  "key": "cellsObj.cell2.onClick"
+                }
+              ],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "borderRadius": "0px",
+              "cellsObj": {
+                "cell2": {
+                  "onClick": "{{navigateTo('关于我们', {})}}",
+                  "picType": "icon",
+                  "widgetId": "",
+                  "icon": "smile-o",
+                  "showArrow": true,
+                  "index": 2,
+                  "label": "关于我们",
+                  "id": "cell2",
+                  "isVisible": true
+                },
+                "cellat6sh8sw74": {
+                  "onClick": "{{(function(){\n\tif(!Count.data.data) {\n\t\tnavigateTo('登录')\n\t\treturn;\n\t}\n\tnavigateTo('优惠券');\n})()}}",
+                  "picType": "icon",
+                  "widgetId": "276rr797mh",
+                  "icon": "coupon-o",
+                  "showArrow": true,
+                  "index": 0,
+                  "id": "cellat6sh8sw74",
+                  "label": "优惠券",
+                  "isVisible": true,
+                  "picSrc": ""
+                },
+                "cell1": {
+                  "onClick": "{{(function(){\n\tif(!Count.data.data) {\n\t\tnavigateTo('登录')\n\t\treturn;\n\t}\n\tnavigateTo('收货地址');\n})()}}",
+                  "picType": "icon",
+                  "widgetId": "",
+                  "icon": "location-o",
+                  "showArrow": true,
+                  "index": 1,
+                  "label": "收货地址",
+                  "id": "cell1",
+                  "isVisible": true
+                }
+              }
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_image1",
+              "rightColumn": 12,
+              "src": "{{global.store.loginInfo.userInfo.avatarUrl}}",
+              "widgetId": "3xs5np5ti6",
+              "topRow": 2,
+              "bottomRow": 8,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "TARO_IMAGE_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "mode": "aspectFill",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 3,
+              "dynamicBindingPathList": [
+                {
+                  "key": "src"
+                }
+              ],
+              "borderRadius": "0px",
+              "radius": "50%"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_text1",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "fontSize"
+                }
+              ],
+              "topRow": 3,
+              "bottomRow": 7,
+              "parentRowSpace": 10,
+              "type": "TARO_TEXT_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 13,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "text": "{{global.store.loginInfo.userInfo.nickName}}",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 37,
+              "textAlign": "LEFT",
+              "widgetId": "y749rfz61u",
+              "isVisible": true,
+              "fontStyle": "",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "fontSize": "1.125rem"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_button1",
+              "onClick": "{{Logout.run(function(){\n\tstoreValue('loginInfo', null);\n\tnavigateTo('首页');\n})}}",
+              "color": "#DD4B34",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "isVisible"
+                },
+                {
+                  "key": "onClick"
+                }
+              ],
+              "topRow": 53,
+              "bottomRow": 59,
+              "parentRowSpace": 10,
+              "showLoading": true,
+              "type": "TARO_BUTTON_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 7,
+              "dynamicBindingPathList": [
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "text": "退出登录",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 57,
+              "widgetId": "1z2a1it7rh",
+              "isVisible": "{{global.store.loginInfo!==null}}",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "rounded": true,
+              "fontSize": "16px"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_text2",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "fontSize"
+                }
+              ],
+              "topRow": 10,
+              "bottomRow": 14,
+              "parentRowSpace": 10,
+              "type": "TARO_TEXT_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 3,
+              "dynamicBindingPathList": [],
+              "text": "我的订单",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 16,
+              "textAlign": "LEFT",
+              "widgetId": "nhidhgmsb1",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "fontSize": "1.125rem"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_grid1",
+              "buttonColor": "#03b365",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "topRow": 14,
+              "bottomRow": 27,
+              "parentRowSpace": 10,
+              "bordered": false,
+              "type": "TARO_GRID_WIDGET",
+              "badgeKey": "num",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "titleColor": "#646566",
+              "leftColumn": 3,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "gridType": "I_N",
+              "cols": 4,
+              "height": "50px",
+              "labelTextSize": "0.875rem",
+              "priceUnit": "￥",
+              "rightColumn": 61,
+              "widgetId": "agcjphfk2r",
+              "descriptionColor": "#DD4B34",
+              "isVisible": true,
+              "list": "[\n  {\n    \"url\": \"https://img.icons8.com/stickers/2x/cheap-2.png\",\n    \"name\": \"待付款\",\n\t\t\"num\": {{Count.data.data ? Count.data.data.order.unpaid : 0}},\n\t\t\"type\": 1\n  },\n  {\n    \"url\": \"https://img.icons8.com/stickers/2x/delivery.png\",\n    \"name\": \"待发货\",\n\t\t\"num\": {{Count.data.data ? Count.data.data.order.unship : 0}},\n\t\t\"type\": 2\n  },\n  {\n    \"url\": \"https://img.icons8.com/stickers/2x/sell.png\",\n    \"name\": \"待收货\",\n\t\t\"num\": {{Count.data.data ?Count.data.data.order.unrecv : 0}},\n\t\t\"type\": 3\n  },\n  {\n    \"url\": \"https://img.icons8.com/stickers/2x/good-quality.png\",\n    \"name\": \"待评论\",\n\t\t\"num\": {{Count.data.data ?Count.data.data.order.uncomment : 0}},\n\t\t\"type\": 4\n  }\n]",
+              "titleKey": "name",
+              "parentId": "0",
+              "urlKey": "url",
+              "isLoading": false,
+              "gutter": "0",
+              "onItemClicked": "{{(function(){\n\tif(!Count.data.data) {\n\t\tnavigateTo('登录')\n\t\treturn;\n\t}\nstoreValue('orderCurrentType', m_grid1.currentItem.type);\nnavigateTo('我的订单');\n})()}}",
+              "borderRadius": "0px",
+              "width": "50px"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_button2",
+              "onClick": "{{(function(){\n\tif(!Count.data.data) {\n\t\tnavigateTo('登录')\n\t\treturn;\n\t}\nstoreValue('orderCurrentType', 0);\nnavigateTo('我的订单');\n})()}}",
+              "color": "#fff",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "topRow": 10,
+              "bottomRow": 14,
+              "parentRowSpace": 10,
+              "showLoading": false,
+              "type": "TARO_BUTTON_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 43,
+              "dynamicBindingPathList": [],
+              "text": "全部订单 ﹥",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 61,
+              "widgetId": "b9h0rrusxj",
+              "isVisible": true,
+              "version": 1,
+              "textColor": "#666",
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "rounded": true,
+              "fontSize": "14px"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_button3",
+              "onClick": "{{navigateTo('登录', {})}}",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "topRow": 47,
+              "bottomRow": 53,
+              "parentRowSpace": 10,
+              "showLoading": true,
+              "type": "TARO_BUTTON_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 7,
+              "dynamicBindingPathList": [
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "text": "立即登录",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 57,
+              "widgetId": "w5mtopn2mw",
+              "isVisible": "{{global.store.loginInfo==null}}",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "rounded": true,
+              "fontSize": "16px"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "个人中心_Count",
+              "name": "Count",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "global.store.loginInfo.token"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "个人中心",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false,
+    "icon": "smile-o"
+  },
+  "deleted": false,
+  "gitSyncId": "63047f8d8eecf64c3a699893_63047f8d8eecf64c3a6998c3"
+}

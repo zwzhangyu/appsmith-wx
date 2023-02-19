@@ -1,0 +1,224 @@
+{
+  "unpublishedPage": {
+    "name": "订单详情",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 450,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 930,
+          "containerStyle": "none",
+          "snapRows": 129,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 30,
+          "minHeight": 850,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "widgetName": "m_kv3",
+              "kColor": "#666",
+              "kKey": "key",
+              "vBold": true,
+              "kSize": "PARAGRAPH",
+              "kAlign": "LEFT",
+              "topRow": 46,
+              "bottomRow": 65,
+              "parentRowSpace": 10,
+              "type": "TARO_KV_WIDGET",
+              "vColor": "#DD4B34",
+              "vAlign": "LEFT",
+              "kBold": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "rightColumn": 64,
+              "inset": true,
+              "widgetId": "zzvho3ivg5",
+              "isVisible": true,
+              "list": "[\n  {\n    \"key\": \"商品总额\",\n    \"value\": {{'￥' + OrderDetail.data.data.orderInfo.goodsPrice}}\n  },\n\t{\n    \"key\": \"运费\",\n    \"value\": {{'+￥' +OrderDetail.data.data.orderInfo.freightPrice}}\n  },\n\t{\n\t\t \"key\": \"商品优惠\",\n    \"value\": {{'-￥' + OrderDetail.data.data.orderInfo.couponPrice}}\n\t},\n\t{\n\t\t \"key\": \"实付款\",\n    \"value\": {{'￥' + OrderDetail.data.data.orderInfo.actualPrice}}\n\t}\n]",
+              "version": 1,
+              "parentId": "0",
+              "layout": "hb",
+              "isLoading": false,
+              "vSize": "PARAGRAPH",
+              "vKey": "value"
+            },
+            {
+              "widgetName": "m_kv2",
+              "kColor": "#666",
+              "kKey": "key",
+              "vBold": true,
+              "kSize": "PARAGRAPH",
+              "kAlign": "LEFT",
+              "topRow": 65,
+              "bottomRow": 81,
+              "parentRowSpace": 10,
+              "type": "TARO_KV_WIDGET",
+              "vColor": "#333",
+              "vAlign": "LEFT",
+              "kBold": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "rightColumn": 64,
+              "inset": true,
+              "widgetId": "qa6ermldvl",
+              "isVisible": true,
+              "list": "[\n  {\n    \"key\": \"收货人\",\n    \"value\": {{OrderDetail.data.data.orderInfo.consignee}}\n  },\n\t{\n    \"key\": \"联系方式\",\n    \"value\": {{OrderDetail.data.data.orderInfo.mobile}}\n  },\n\t{\n\t\t \"key\": \"收货地址\",\n    \"value\": {{OrderDetail.data.data.orderInfo.address}}\n\t}\n]",
+              "version": 1,
+              "parentId": "0",
+              "layout": "h",
+              "isLoading": false,
+              "vSize": "PARAGRAPH",
+              "vKey": "value"
+            },
+            {
+              "widgetName": "m_list1",
+              "buttonColor": "#03b365",
+              "emptyText": "暂无商品数据",
+              "topRow": 15,
+              "bottomRow": 46,
+              "parentRowSpace": 10,
+              "type": "TARO_LIST_WIDGET",
+              "showLoading": true,
+              "priceKey": "price",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "titleColor": "#646566",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "contentType": "I_N_D_P_B",
+              "height": "80px",
+              "buttonText": "",
+              "rightColumn": 64,
+              "inset": true,
+              "priceColor": "#DD4B34",
+              "widgetId": "75izedz22w",
+              "descriptionKey": "specifications",
+              "descriptionColor": "#999",
+              "emptyPic": "https://img.icons8.com/stickers/344/purchase-order.png",
+              "isVisible": true,
+              "list": "{{OrderDetail.data.data.orderGoods.map(function(o){\n\to.num = 'x ' + o.number;\n\treturn o;\n})}}",
+              "titleKey": "goodsName",
+              "parentId": "0",
+              "urlKey": "picUrl",
+              "isLoading": false,
+              "controlType": "TEXT",
+              "controlTextKey": "num",
+              "width": "100px"
+            },
+            {
+              "widgetName": "m_kv1",
+              "kColor": "#666",
+              "kKey": "key",
+              "vBold": true,
+              "kSize": "PARAGRAPH",
+              "kAlign": "LEFT",
+              "topRow": 0,
+              "bottomRow": 15,
+              "parentRowSpace": 10,
+              "type": "TARO_KV_WIDGET",
+              "vColor": "#333",
+              "vAlign": "LEFT",
+              "kBold": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "rightColumn": 64,
+              "inset": true,
+              "widgetId": "sltbm78xpt",
+              "isVisible": true,
+              "list": "[\n  {\n    \"key\": \"订单编号\",\n    \"value\": {{OrderDetail.data.data.orderInfo.orderSn}}\n  },\n\t{\n    \"key\": \"下单时间\",\n    \"value\": {{OrderDetail.data.data.orderInfo.addTime}}\n  },\n\t{\n\t\t \"key\": \"订单状态\",\n    \"value\": {{OrderDetail.data.data.orderInfo.orderStatusText}}\n\t}\n]",
+              "version": 1,
+              "parentId": "0",
+              "layout": "h",
+              "isLoading": false,
+              "vSize": "PARAGRAPH",
+              "vKey": "value"
+            },
+            {
+              "widgetName": "m_button1",
+              "rightColumn": 58,
+              "onClick": "{{navigateTo('我的订单', {})}}",
+              "widgetId": "km87ll7fou",
+              "topRow": 85,
+              "bottomRow": 91,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "showLoading": true,
+              "type": "TARO_BUTTON_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 7,
+              "dynamicBindingPathList": [],
+              "rounded": true,
+              "fontSize": "16px",
+              "text": "我的订单"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "订单详情_OrderDetail",
+              "name": "OrderDetail",
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "global.store.loginInfo.token",
+                "global.URL.queryParams.id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "validOnPageLoadActions": true,
+        "id": "订单详情",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "63047f8d8eecf64c3a699893_63047f8d8eecf64c3a6998b5"
+}

@@ -1,0 +1,530 @@
+{
+  "unpublishedPage": {
+    "name": "首页",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 450,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 4080,
+          "containerStyle": "none",
+          "snapRows": 125,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 71,
+          "minHeight": 850,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_search1",
+              "rightColumn": 64,
+              "onClick": "{{navigateTo('搜索',{})}}",
+              "widgetId": "3e4imuoeb7",
+              "inputAlign": "center",
+              "topRow": 0,
+              "bottomRow": 7,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "TARO_SEARCH_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "readonly": true,
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "placeholder"
+                }
+              ],
+              "borderRadius": "0px",
+              "rounded": true,
+              "placeholder": "商品搜索，共{{GoodsCount.data.data}}款好物"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_grid5",
+              "buttonColor": "#03b365",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "topRow": 352,
+              "bottomRow": 406,
+              "parentRowSpace": 10,
+              "bordered": true,
+              "type": "TARO_GRID_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "titleColor": "#646566",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "gridType": "I_N_D",
+              "cols": "2",
+              "height": "160px",
+              "labelTextSize": "0.875rem",
+              "priceUnit": "￥",
+              "asPrice": true,
+              "rightColumn": 64,
+              "widgetId": "wla2qla6wk",
+              "descriptionKey": "retailPrice",
+              "descriptionColor": "#DD4B34",
+              "isVisible": true,
+              "list": "{{IndexData.data.data.floorGoodsList[2].goodsList}}",
+              "titleKey": "name",
+              "parentId": "0",
+              "urlKey": "picUrl",
+              "isLoading": false,
+              "gutter": "0",
+              "onItemClicked": "{{navigateTo('商品详情',{id: m_grid5.currentItem.id})}}",
+              "borderRadius": "0px"
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_text3CopyCopy",
+              "rightColumn": 36,
+              "textAlign": "CENTER",
+              "widgetId": "ph9jqjaquu",
+              "topRow": 348,
+              "bottomRow": 352,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "fontStyle": "",
+              "type": "TARO_TEXT_WIDGET",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 28,
+              "dynamicBindingPathList": [],
+              "borderRadius": "0px",
+              "fontSize": "1rem",
+              "text": "糕点"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_grid4",
+              "buttonColor": "#03b365",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "topRow": 298,
+              "bottomRow": 344,
+              "parentRowSpace": 10,
+              "bordered": true,
+              "type": "TARO_GRID_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "titleColor": "#646566",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "gridType": "I_N_D",
+              "cols": "2",
+              "height": "120px",
+              "labelTextSize": "0.875rem",
+              "priceUnit": "￥",
+              "asPrice": true,
+              "rightColumn": 64,
+              "widgetId": "sv1gxlwftj",
+              "descriptionKey": "retailPrice",
+              "descriptionColor": "#DD4B34",
+              "isVisible": true,
+              "list": "{{IndexData.data.data.floorGoodsList[1].goodsList}}",
+              "titleKey": "name",
+              "parentId": "0",
+              "urlKey": "picUrl",
+              "isLoading": false,
+              "gutter": "0",
+              "onItemClicked": "{{navigateTo('商品详情',{id: m_grid4.currentItem.id})}}",
+              "borderRadius": "0px"
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_text3Copy",
+              "rightColumn": 36,
+              "textAlign": "CENTER",
+              "widgetId": "6y0fadzl9k",
+              "topRow": 294,
+              "bottomRow": 298,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "fontStyle": "",
+              "type": "TARO_TEXT_WIDGET",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 28,
+              "dynamicBindingPathList": [],
+              "borderRadius": "0px",
+              "fontSize": "1rem",
+              "text": "餐厨"
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_swiper1",
+              "rightColumn": 64,
+              "widgetId": "1x53paxupi",
+              "topRow": 7,
+              "bottomRow": 32,
+              "linkKey": "",
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "list": "{{IndexData.data.data.banner}}",
+              "type": "TARO_SWIPER_WIDGET",
+              "parentId": "0",
+              "urlKey": "url",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "borderRadius": "0px"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_grid1",
+              "topRow": 32,
+              "bottomRow": 53,
+              "parentRowSpace": 10,
+              "bordered": false,
+              "type": "TARO_GRID_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "gridType": "I_N",
+              "cols": "5",
+              "height": "30px",
+              "labelTextSize": "0.875rem",
+              "asPrice": true,
+              "rightColumn": 64,
+              "widgetId": "tov9hciijy",
+              "isVisible": true,
+              "list": "{{IndexData.data.data.channel}}",
+              "titleKey": "name",
+              "parentId": "0",
+              "urlKey": "iconUrl",
+              "isLoading": false,
+              "gutter": "0",
+              "onItemClicked": "{{navigateTo('全部商品',{id: m_grid1.currentItem.id} + '///')}}",
+              "borderRadius": "0px"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_grid2",
+              "buttonColor": "#03b365",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "topRow": 59,
+              "bottomRow": 127,
+              "parentRowSpace": 10,
+              "onItemButtonClicked": "",
+              "bordered": true,
+              "type": "TARO_GRID_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onItemClicked"
+                },
+                {
+                  "key": "onItemButtonClicked"
+                }
+              ],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "titleColor": "",
+              "gridType": "I_N_D",
+              "cols": "2",
+              "height": "120px",
+              "labelTextSize": "0.875rem",
+              "asPrice": true,
+              "priceUnit": "￥",
+              "buttonText": "",
+              "rightColumn": 64,
+              "widgetId": "ns7mmur8iq",
+              "descriptionKey": "retailPrice",
+              "descriptionColor": "#DD4B34",
+              "isVisible": true,
+              "list": "{{IndexData.data.data.newGoodsList}}",
+              "titleKey": "name",
+              "parentId": "0",
+              "urlKey": "picUrl",
+              "isLoading": false,
+              "gutter": "0",
+              "onItemClicked": "{{navigateTo('商品详情',{id: m_grid2.currentItem.id})}}",
+              "borderRadius": "0px"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_text1",
+              "topRow": 55,
+              "bottomRow": 59,
+              "parentRowSpace": 10,
+              "type": "TARO_TEXT_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 20,
+              "dynamicBindingPathList": [],
+              "text": "周一周四 · 新品首发",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 43,
+              "backgroundColor": "",
+              "textAlign": "CENTER",
+              "widgetId": "2hxqdc2au9",
+              "isVisible": true,
+              "fontStyle": "",
+              "textColor": "#231F20",
+              "version": 1,
+              "shouldScroll": false,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "fontSize": "1rem"
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_text2",
+              "rightColumn": 38,
+              "textAlign": "CENTER",
+              "widgetId": "c3sl85tykt",
+              "topRow": 130,
+              "bottomRow": 134,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "fontStyle": "",
+              "type": "TARO_TEXT_WIDGET",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 25,
+              "dynamicBindingPathList": [],
+              "borderRadius": "0px",
+              "fontSize": "1rem",
+              "text": "人气推荐"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_list1",
+              "buttonColor": "#03b365",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "topRow": 134,
+              "bottomRow": 234,
+              "parentRowSpace": 10,
+              "type": "TARO_LIST_WIDGET",
+              "priceKey": "retailPrice",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "titleColor": "#646566",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "contentType": "I_N_D_P",
+              "height": "140px",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 64,
+              "inset": false,
+              "priceColor": "#DD4B34",
+              "widgetId": "hbig87q0te",
+              "descriptionKey": "brief",
+              "descriptionColor": "#999",
+              "isVisible": true,
+              "list": "{{IndexData.data.data.hotGoodsList}}",
+              "titleKey": "name",
+              "parentId": "0",
+              "urlKey": "picUrl",
+              "isLoading": false,
+              "onItemClicked": "{{navigateTo('商品详情',{id: m_list1.currentItem.id})}}",
+              "controlType": "BUTTON",
+              "borderRadius": "0px",
+              "width": "140px"
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_text3",
+              "rightColumn": 36,
+              "textAlign": "CENTER",
+              "widgetId": "k1as9vt19n",
+              "topRow": 237,
+              "bottomRow": 241,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "fontStyle": "",
+              "type": "TARO_TEXT_WIDGET",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 28,
+              "dynamicBindingPathList": [],
+              "borderRadius": "0px",
+              "fontSize": "1rem",
+              "text": "居家"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_grid3",
+              "buttonColor": "#03b365",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "topRow": 241,
+              "bottomRow": 289,
+              "parentRowSpace": 10,
+              "bordered": true,
+              "type": "TARO_GRID_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "titleColor": "#646566",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "gridType": "I_N_D",
+              "cols": "2",
+              "height": "120px",
+              "labelTextSize": "0.875rem",
+              "priceUnit": "￥",
+              "asPrice": true,
+              "rightColumn": 64,
+              "widgetId": "j2baxdc8rp",
+              "descriptionKey": "retailPrice",
+              "descriptionColor": "#DD4B34",
+              "isVisible": true,
+              "list": "{{IndexData.data.data.floorGoodsList[0].goodsList}}",
+              "titleKey": "name",
+              "parentId": "0",
+              "urlKey": "picUrl",
+              "isLoading": false,
+              "gutter": "0",
+              "onItemClicked": "{{navigateTo('商品详情',{id: m_grid3.currentItem.id})}}",
+              "borderRadius": "0px"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "首页_GoodsCount",
+              "name": "GoodsCount",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "首页_IndexData",
+              "name": "IndexData",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "首页",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false,
+    "icon": "home-o"
+  },
+  "deleted": false,
+  "gitSyncId": "63047f8d8eecf64c3a699893_63047f8d8eecf64c3a6998a7"
+}

@@ -1,0 +1,255 @@
+{
+  "unpublishedPage": {
+    "name": "全部商品",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 450,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 840,
+          "containerStyle": "none",
+          "snapRows": 129,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 71,
+          "minHeight": 850,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_tabs1",
+              "rightColumn": 12,
+              "widgetId": "juuxdwbyp2",
+              "topRow": 7,
+              "bottomRow": 81,
+              "onTabSelected": "{{CurrentCatalog.run()}}",
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "list": "{{Catalog.data.data.categoryList}}",
+              "type": "TARO_TABS_WIDGET",
+              "showLoading": true,
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onTabSelected"
+                }
+              ],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                },
+                {
+                  "key": "defaultNum"
+                }
+              ],
+              "borderRadius": "0px",
+              "nameKey": "name",
+              "defaultNum": "{{_.findIndex(Catalog.data.data.categoryList, {id: Catalog.data.data.currentCategory.id})}}"
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_image1",
+              "rightColumn": 64,
+              "src": "{{(CurrentCatalog.data.data ? CurrentCatalog.data.data.currentCategory.picUrl : undefined) || Catalog.data.data.currentCategory.picUrl}}",
+              "widgetId": "gthgnstnt5",
+              "topRow": 7,
+              "bottomRow": 23,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "TARO_IMAGE_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "mode": "aspectFill",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 12,
+              "dynamicBindingPathList": [
+                {
+                  "key": "src"
+                }
+              ],
+              "borderRadius": "0px",
+              "radius": "5"
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_text1",
+              "rightColumn": 45,
+              "textAlign": "CENTER",
+              "widgetId": "p99ty5afk1",
+              "topRow": 23,
+              "bottomRow": 27,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "TARO_TEXT_WIDGET",
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 29,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "borderRadius": "0px",
+              "fontSize": "1rem",
+              "text": "{{(CurrentCatalog.data.data ? CurrentCatalog.data.data.currentCategory.name : undefined) || Catalog.data.data.currentCategory.name}}分类"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_grid1",
+              "buttonColor": "#03b365",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "emptyText": "",
+              "topRow": 27,
+              "bottomRow": 81,
+              "parentRowSpace": 10,
+              "bordered": true,
+              "type": "TARO_GRID_WIDGET",
+              "badgeKey": "",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "titleColor": "#646566",
+              "leftColumn": 12,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "gridType": "I_N",
+              "cols": "3",
+              "height": "80px",
+              "labelTextSize": "0.875rem",
+              "priceUnit": "￥",
+              "rightColumn": 64,
+              "widgetId": "jtrakev422",
+              "descriptionColor": "#DD4B34",
+              "emptyPic": "",
+              "isVisible": true,
+              "list": "{{(CurrentCatalog.data.data ? CurrentCatalog.data.data.currentSubCategory : undefined) || Catalog.data.data.currentSubCategory}}",
+              "titleKey": "name",
+              "parentId": "0",
+              "urlKey": "picUrl",
+              "isLoading": false,
+              "gutter": "0",
+              "onItemClicked": "{{(function(){\nstoreValue('current2Catalog',m_grid1.currentItem.id);\nnavigateTo('二级分类');\n})()}}",
+              "borderRadius": "0px"
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_search1",
+              "rightColumn": 64,
+              "onClick": "{{navigateTo('搜索',{})}}",
+              "widgetId": "xxfluccr7y",
+              "inputAlign": "center",
+              "topRow": 0,
+              "bottomRow": 7,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "TARO_SEARCH_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "readonly": true,
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "placeholder"
+                }
+              ],
+              "borderRadius": "0px",
+              "rounded": true,
+              "placeholder": "商品搜索，共{{GoodsCount.data.data}}款好物"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "全部商品_GoodsCount",
+              "name": "GoodsCount",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "全部商品_CurrentCatalog",
+              "name": "CurrentCatalog",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "m_tabs1.selectedTab.id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "全部商品_Catalog",
+              "name": "Catalog",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "global.URL.queryParams.id ? 'id' : undefined",
+                "global.URL.queryParams.id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "全部商品",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false,
+    "icon": "apps-o"
+  },
+  "deleted": false,
+  "gitSyncId": "63047f8d8eecf64c3a699893_63047f8d8eecf64c3a6998bf"
+}

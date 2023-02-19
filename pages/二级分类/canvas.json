@@ -1,0 +1,228 @@
+{
+  "unpublishedPage": {
+    "name": "二级分类",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 450,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 850,
+          "containerStyle": "none",
+          "snapRows": 129,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 71,
+          "minHeight": 850,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_tabs1",
+              "rightColumn": 64,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "isVisible"
+                },
+                {
+                  "key": "onTabSelected"
+                }
+              ],
+              "widgetId": "ivw6egjinh",
+              "topRow": 0,
+              "bottomRow": 7,
+              "onTabSelected": "{{(function(){\nstoreValue('current2Catalog',m_tabs1.selectedTab.id);\n\tSearch.run();\n\tCategoryInfo.run();\n})()}}",
+              "parentRowSpace": 10,
+              "isVisible": "{{!!CategoryInfo.data.data.brotherCategory.length}}",
+              "list": "{{CategoryInfo.data.data.brotherCategory}}",
+              "type": "TARO_TABS_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onTabSelected"
+                }
+              ],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                },
+                {
+                  "key": "isVisible"
+                },
+                {
+                  "key": "defaultNum"
+                }
+              ],
+              "borderRadius": "0px",
+              "nameKey": "name",
+              "defaultNum": "{{_.findIndex(CategoryInfo.data.data.brotherCategory, {'id': CategoryInfo.data.data.currentCategory.id})}}"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_grid1",
+              "buttonColor": "#03b365",
+              "dynamicPropertyPathList": [],
+              "topRow": 16,
+              "bottomRow": 83,
+              "parentRowSpace": 10,
+              "bordered": true,
+              "type": "TARO_GRID_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "titleColor": "#646566",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "gridType": "I_N",
+              "cols": "3",
+              "height": "100px",
+              "labelTextSize": "0.875rem",
+              "priceUnit": "￥",
+              "rightColumn": 64,
+              "widgetId": "lzsof4i6pt",
+              "descriptionColor": "#DD4B34",
+              "isVisible": true,
+              "list": "{{Search.data.data.list}}",
+              "titleKey": "name",
+              "parentId": "0",
+              "urlKey": "picUrl",
+              "isLoading": true,
+              "gutter": "0",
+              "onItemClicked": "{{navigateTo('商品详情',{id: m_grid1.currentItem.id})}}",
+              "borderRadius": "0px"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "m_text1",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "topRow": 8,
+              "bottomRow": 12,
+              "parentRowSpace": 10,
+              "type": "TARO_TEXT_WIDGET",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 24,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                },
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "text": "{{CategoryInfo.data.data.currentCategory.name}}",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 40,
+              "textAlign": "CENTER",
+              "widgetId": "72uwros2qm",
+              "isVisible": "{{!!CategoryInfo.data.data.currentCategory}}",
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "fontSize": "1rem"
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "m_text2",
+              "rightColumn": 64,
+              "textAlign": "CENTER",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "widgetId": "2vbvkzymqm",
+              "topRow": 12,
+              "bottomRow": 16,
+              "parentRowSpace": 10,
+              "isVisible": "{{!!CategoryInfo.data.data.currentCategory}}",
+              "type": "TARO_TEXT_WIDGET",
+              "textColor": "#888",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                },
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "borderRadius": "0px",
+              "fontSize": "0.875rem",
+              "text": "{{CategoryInfo.data.data.currentCategory.desc}}"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "二级分类_CategoryInfo",
+              "name": "CategoryInfo",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "global.store.current2Catalog"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "二级分类_Search",
+              "name": "Search",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "global.store.current2Catalog"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "二级分类",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "63047f8d8eecf64c3a699893_63047f8d8eecf64c3a6998bd"
+}

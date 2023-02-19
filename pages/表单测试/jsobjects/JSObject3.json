@@ -1,0 +1,25 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject3",
+    "pageId": "表单测试",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "表单测试_JSObject3",
+  "deleted": false,
+  "gitSyncId": "63f08b6dde5d5825c7acb93c_63f0c469de5d5825c7acba5f"
+}
